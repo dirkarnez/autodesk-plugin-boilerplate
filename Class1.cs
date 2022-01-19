@@ -1318,10 +1318,10 @@ namespace Lab8_Complete
 
             foreach (string line in System.IO.File.ReadLines(fileName))
             {
-                System.Console.WriteLine(line);
-                acDoc.SendStringToExecute(line, true, false, false);
+                var index = line.IndexOf("//");
+                acDoc.SendStringToExecute(index > -1 ? line.Substring(0, index) : line, true, false, false);
             }
-
+            
             // Draws a circle and zooms to the extents or 
             // limits of the drawing
             // acDoc.SendStringToExecute("._circle 2,2,0 4 ", true, false, false);
