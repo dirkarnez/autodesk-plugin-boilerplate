@@ -7,7 +7,7 @@ jobs:
       - uses: actions/checkout@v2
       
       - name: Extract some files
-        run: 7z x ObjectARX_for_AutoCAD_2022_Win_64bit_dlm.zip.001 -oObjectARX_for_AutoCAD_2022_Win_64bit_dlm\
+        run: 7z x ObjectARX_for_AutoCAD_2022_Win_64bit_dlm.zip.001 -o.
       
       - name: Add msbuild to PATH
         uses: microsoft/setup-msbuild@v1.1
