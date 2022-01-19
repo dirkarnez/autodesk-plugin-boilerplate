@@ -12,4 +12,4 @@ jobs:
           msbuild-architecture: x64
           
       - name: Build app for release
-        run: msbuild Lab8_Complete_2022.sln -t:rebuild -property:Configuration=Release
+        run: MSBuild.exe Lab8_Complete_2022.sln /p:Configuration=Release /p:Platform="x64"
